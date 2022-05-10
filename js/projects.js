@@ -15,9 +15,7 @@ async function wpPostList() {
                                 <img src="${getPosts[i].featured_media_src_url}" alt="" /></a>
                                 </div>`;
     }
-  } catch (err) {
-    //   console.log("Her er feilen:", err);
-  }
+  } catch (err) {}
 }
 
 wpPostList();

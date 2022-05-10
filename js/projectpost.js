@@ -14,27 +14,9 @@ const loader = document.querySelector(".loader")
 
 import apiCall from "./components/getapi.js";
 
-// async function wpPost() {
-//     try {
-//         const postData = await apiCall(wpIdPost);
-//         for (let i = 0; i < postData.length; i++) {
-//             console.log(postData[i]);
-//             createHtml();
-//             // console.log("object");
-            
-            
-//         }
-
-
-//     } catch(err) {
-//         // console.log("Her er feilen: ", err);
-//     }
-// }
-// wpPost();
-
 async function wpPost() {
     try {
-      const postData = await apiCall(wpIdPost);;
+      const postData = await apiCall(wpIdPost);
       postContainer.innerHTML = `<div>
                                   <h2>${postData.title.rendered}</h2>
                                   <p>${postData.acf.paragraph}</p>
