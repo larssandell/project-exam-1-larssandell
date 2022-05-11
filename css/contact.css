@@ -1,0 +1,26 @@
+.contact-container {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: 
+    "form"
+    "desc"
+    "location";
+}
+
+
+.contat-form {
+    grid-area: form;
+}
+.contat-description {
+    grid-area: desc;
+}
+.contat-location {
+    grid-area: location;
+}
+#test {
+    display: flex;
+    flex-direction: column;
+}
+iframe {
+    border-radius: 10px;
+}

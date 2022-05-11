@@ -84,10 +84,8 @@ p {
 }
 
 .nav-logo {
-    width: 200px;
+    width: 100px;
     height: auto;
-    margin: auto 10px;
-
 }
 
 /* header - navigation - hamburger menu */
@@ -100,6 +98,11 @@ li {
     list-style-type: none;
     padding: 5px 5px;
 }
+.logo-container {
+    display: block;
+    margin: auto;
+    padding: auto;
+}
 a {
     color: #0D0D0D;
     text-decoration: none;
@@ -109,7 +112,7 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: auto 10px auto auto;
+    margin: auto;
     /* float: right; */
 }
 .nav-menu {
@@ -148,10 +151,59 @@ a {
     transition: all 0.3s ease-in-out;
     background-color: black;
 }
-
-
-
-
+/* main content */
+.loader {
+    display: flex;
+    justify-content: center;
+    justify-self: center;
+}
+.services-container {
+    display: block;
+    margin: auto;
+    padding: auto;
+}
+.services {
+    display: block;
+    margin: auto;
+    padding: auto;
+}
+.card-container {
+    display: grid;
+    grid-template-rows: repeat( auto-fit, 1fr ); /* funker bedre uten auto-fit */
+    /* column-gap: 20px; */
+    grid-template-areas: 
+    "img headline"
+    "img text";
+    background-color: brown;
+    border-radius: 10px;
+    margin-top: 8px;
+    box-shadow: 5px 5px 2px 0px rgba(0,0,0,0.2);
+}
+.image {
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+}
+.card-image {
+    position: relative;
+    grid-area: img;
+}
+.card-headline {
+    grid-area: headline;
+    text-align: center;
+    padding-top: 5px;
+    height: fit-content;
+}
+.card-text {
+    grid-area: text;
+}
+.card-container h2{
+    font-size: 0.8rem;
+}
+.card-container p{
+    font-size: 0.5rem;
+    padding: 0 10px;
+}
 
 
 
@@ -170,6 +222,7 @@ a {
 /* Footer */
 footer {
     min-height: 60px;
+    margin-top: 10px;
 
 }
 .footer-container {
