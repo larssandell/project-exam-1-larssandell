@@ -101,7 +101,7 @@ function movePrev() {
   updateDots();
 }
 
-// Auto play the carousel
+//Auto play the carousel
 // setInterval(function() {
 //   moveNext();
 // }, 6000);
