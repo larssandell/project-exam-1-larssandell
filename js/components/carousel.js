@@ -52,6 +52,7 @@ const slidesLen = slides.length;
 console.log(slidesLen);
 const btnNext = document.getElementById("button-next");
 const btnPrev = document.getElementById("button-prev");
+
 // dot navigation
 const navigation = document.querySelector(".navigation");
 const dots = Array.from(navigation.children);
@@ -79,7 +80,7 @@ function updateDots() {
    dot.classList.remove("nav-active");
    dot.classList.add("nav-hidden");
   }
-  dots[slideIndex].classList.add("nav-active")
+  dots[slideIndex].classList.add("nav-active");
 }
 
 function moveNext() {
