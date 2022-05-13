@@ -1,4 +1,4 @@
-.contact-container {
+/* .contact-container {
     display: grid;
     grid-template-rows: 1fr 1fr 1fr;
     grid-template-areas: 
@@ -11,16 +11,61 @@
 .contat-form {
     grid-area: form;
 }
-.contat-description {
+.contact-description {
     grid-area: desc;
 }
-.contat-location {
+.contact-location {
     grid-area: location;
+} */
+iframe {
+    border-radius: 10px;
 }
-#test {
+
+
+/* form */
+.form-container {
+    display: block;
+    margin: auto;
+}
+
+#form {
+    background-color: #f2f2f2;
+    border-radius: 10px;
+    padding: 10px;
+}
+#form h1 {
+    color: #000;
+    text-align: center;
+}
+#form button {
+
+}
+.form-box {
     display: flex;
     flex-direction: column;
 }
-iframe {
+.form-box input {
+    border: 2px solid #f0f0f0;
     border-radius: 10px;
+    display: block;
+    padding: 10px;
+    width: 100%;
+}
+.form-box input:focus {
+    outline: 0;
+}
+.form-box.success input {
+    border-color: green;
+}
+.form-box.error input {
+    border-color: red;
+}
+.form-box .error-form {
+    color: red;
+    height: 10px;
+    font-size: 10px;
+}
+.h2-success {
+    display: block;
+    text-align: center;
 }

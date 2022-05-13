@@ -39,27 +39,43 @@
     </nav>
 </header>
   <main>
+    <div class="form-container">
+      <form id="form" action="">
+        <h1>Forespørsel</h1>
+        <div class="validation-success"></div>
+        <div class="form-box">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" placeholder="Name *">
+          <div class="error-form"></div>
+        </div>
+        <div class="form-box">
+          <label for="email">Email:</label>
+          <input type="text" id="email" name="email" placeholder="Email *">
+          <div class="error-form"></div>
+        </div>
+        <div class="form-box">
+          <label for="msgtype">Henvendelse:</label>
+          <select name="msgtype" id="msgtype">
+            <option value="request">Forespørsel</option>
+            <option value="career">karriere</option>
+          </select>
+          <div class="error-form"></div>
+        </div>
+        <div class="form-box">
+          <label for="subject">Subject:</label>
+          <input type="text" id="subject" name="subject" placeholder="Subject *"></input>
+          <div class="error-form"></div>
+        </div>
+        <div class="form-box">
+          <label for="message">message:</label>
+          <textarea type="text" id="message" name="message" placeholder="message *"></textarea>
+          <div class="error-form"></div>
+        </div>
+        <button type="submit" class="btn-submit">Send melding</button>
+      </form>
+    </div>
       <div class="contact-container">
-          <div class="contat-form" id="test">
-              <form action="POST" id="form">
-                  <label for="fullname">Name:</label>
-                  <input type="text" id="fullname" name="fullname" placeholder="Name">
-                  
-                  <label for="msgtype">Henvendelse</label>
-                  <select name="msgtype" id="msgtype">
-                      <option value="request">Forespørsel</option>
-                      <option value="career">karriere</option>
-                  </select>
-                  
-                  <label for="email">Email:</label>
-                  <input type="text" id="email" name="email" placeholder="Email">
-                  
-                  <label for="subject">Subject:</label>
-                  <textarea type="textarea" id="subject" name="subject" placeholder="Subject"></textarea>
-                  <button type="submit">Send melding</button>
-              </form>
-          </div>
-          <div class="contat-description">
+          <div class="contact-description">
               <h2>Forespørsler</h2>
               <p>
                 Ikke nøl med å ta kontakt, enten du lurer på noe generelt eller spesifikt.
@@ -71,14 +87,14 @@
                     inklusiv kjerneorganisasjonen. Om dette er deg vil vi veldig gjerne at du sender CV og et følgebrev til
                 </p>
           </div>
-          <div class="contat-location">
+          <div class="contact-location">
               <div><p>Hovedkontor: Kjøita 40
                 4630 Kristiansand
                 Norge</p>
             </div>
-            <div class="mapouter">
+            <!-- <div class="mapouter">
               <div class="gmap_canvas"><iframe width="300" height="200" id="gmap_canvas" src="https://maps.google.com/maps?q=kj%C3%B8ita%2040&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://123movies-to.org"></a><br><style>.mapouter{position:relative;text-align:right;height:500px;width:600px;}</style><a href="https://www.embedgooglemap.net"></a><style>.gmap_canvas {overflow:hidden;background:none!important;height:500px;width:600px;}</style></div></div>
-              <div>
+              <div> -->
                   <h2>Kontakt info:</h2>
                   <p><a href="mailto:post@smartinspection.no">post@smartinspection.no</a></p>
                   <p>Tel: +47 38 79 58 40</p>
@@ -97,5 +113,6 @@
   </div>
   </footer>
   <script src="/js/script.js"></script>
+  <script src="/js/contact2.js"></script>
 </body>
 </html>
