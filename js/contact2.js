@@ -10,6 +10,7 @@ const formSuccess = document.querySelector(".validation-success");
 
 // error and success messages
 const error = (element, message) => {
+    // endre navn på inputControl og errorDispay
     const inputControl = element.parentElement;
     const errorDisplay = inputControl.querySelector('.error-form');
 

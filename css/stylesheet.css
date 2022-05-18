@@ -53,6 +53,7 @@ header {
     flex-wrap: wrap;
     flex-direction: row;
     height: 140px;
+    margin-bottom: 10px;
 }
 main {
     grid-area: main;
@@ -78,30 +79,18 @@ p {
 
 /* header - logo */
 .header-logo {
-    align-items: center;
-    justify-content: center;
-
-}
-
-.nav-logo {
-    width: 100px;
+    width: 200px;
     height: auto;
+    display: block;
 }
 
 /* header - navigation - hamburger menu */
-.header-nav {
-    position: relative;
-    align-self: center;
-    margin-left: 10px;
-}
 li {
     list-style-type: none;
     padding: 5px 5px;
 }
 .logo-container {
-    display: block;
-    margin: auto;
-    padding: auto;
+    margin: auto
 }
 a {
     color: #0D0D0D;
@@ -112,8 +101,8 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: auto;
-    /* float: right; */
+    /* margin: auto; */
+    padding-right: 10px;
 }
 .nav-menu {
     display: flex;
@@ -180,13 +169,23 @@ a {
     box-shadow: 5px 5px 2px 0px rgba(0,0,0,0.2);
 }
 .image {
+    display: block;
     height: 100%;
     width: 100%;
     border-radius: 10px;
+    object-fit: cover;
+    cursor: pointer;
 }
+
 .card-image {
     position: relative;
     grid-area: img;
+    /* må endre widht i media q */
+    width: 125px;
+}
+.card-image:hover {
+    opacity: 0.8;
+    transition: all ease-in-out 100ms;
 }
 .card-headline {
     grid-area: headline;
@@ -204,17 +203,32 @@ a {
     font-size: 0.5rem;
     padding: 0 10px;
 }
+/* Zoom image */
+#zoom-bg {
+    position: fixed;
+    z-index: 200;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.8);
+    display: none;
+    cursor: pointer;
+    justify-items: center;
+    justify-content: center;
+}
+#zoom-bg.popup {
+    display: flex;
 
-
-
-
-
-
-
-
-
-
-
+}
+#popupImage {
+    /* width: 300px;
+    height: 300px; */
+    width: 70vw;
+    height: auto;
+    display: block;
+    margin: auto;
+}
 
 
 

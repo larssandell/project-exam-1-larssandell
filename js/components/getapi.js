@@ -1,4 +1,4 @@
-// Api Call
+// Api Call universal
 const loader = document.querySelector(".loader");
 const wpApi = "https://si.larssandell.no/wp-json/wp/v2/posts/";
 

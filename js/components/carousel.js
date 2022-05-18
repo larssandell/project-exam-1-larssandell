@@ -18,23 +18,23 @@ async function getApiSlides() {
       if (i === 0) {
         // console.log(getSlides[i].id);
         // console.log(getSlides[i]);
-        slideOne.innerHTML += `<a href="/projectpost.html?id=${getSlides[i].id}">
+        slideOne.innerHTML += `<a class="slide-link" href="/projectpost.html?id=${getSlides[i].id}">
         <img class="slide-image" src="${getSlides[i].featured_media_src_url}"/>
         <h2 class="carousel-h2">${getSlides[i].title.rendered}</h2></a>`
       } else if (i === 1) {
-        slideTwo.innerHTML += `<a href="/projectpost.html?id=${getSlides[i].id}">
+        slideTwo.innerHTML += `<a class="slide-link" href="/projectpost.html?id=${getSlides[i].id}">
         <img class="slide-image" src="${getSlides[i].featured_media_src_url}"/>
         <h2 class="carousel-h2">${getSlides[i].title.rendered}</h2></a>`
       }else if (i === 2) {
-        slideThree.innerHTML += `<a href="/projectpost.html?id=${getSlides[i].id}">
+        slideThree.innerHTML += `<a class="slide-link" href="/projectpost.html?id=${getSlides[i].id}">
         <img class="slide-image" src="${getSlides[i].featured_media_src_url}"/>
         <h2 class="carousel-h2">${getSlides[i].title.rendered}</h2></a>`
       }else if (i === 3) {
-        slideFour.innerHTML += `<a href="/projectpost.html?id=${getSlides[i].id}">
+        slideFour.innerHTML += `<a class="slide-link" href="/projectpost.html?id=${getSlides[i].id}">
         <img class="slide-image" src="${getSlides[i].featured_media_src_url}"/>
         <h2 class="carousel-h2">${getSlides[i].title.rendered}</h2></a>`
       }else if (i === 4) {
-        slideFive.innerHTML += `<a href="/projectpost.html?id=${getSlides[i].id}">
+        slideFive.innerHTML += `<a class="slide-link" href="/projectpost.html?id=${getSlides[i].id}">
         <img class="slide-image" src="${getSlides[i].featured_media_src_url}"/>
         <h2 class="carousel-h2">${getSlides[i].title.rendered}</h2></a>`
       }
@@ -57,6 +57,7 @@ const btnPrev = document.getElementById("button-prev");
 const navigation = document.querySelector(".navigation");
 const dots = Array.from(navigation.children);
 console.log(dots);
+const dot = document.querySelector(".dot");
 
 // next and prev buttons
 btnNext.addEventListener("click", function() {
@@ -65,6 +66,7 @@ btnNext.addEventListener("click", function() {
 btnPrev.addEventListener("click", function() {
   movePrev();
 });
+
 
 // function to move and update dots and slides
 function updateMove() {
@@ -100,6 +102,9 @@ function movePrev() {
   }
   updateMove();
   updateDots();
+}
+function moveDots() {
+  
 }
 
 //Auto play the carousel

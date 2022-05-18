@@ -6,19 +6,58 @@
   <meta name="description" content="Smart Inspection AS er en sterkt voksende aktør innen digitalisering av bygg og anleggsbransjen. Dette gjøres ved bruk av både tradisjonelle og moderne hjelpemiddler som landmålingstjenster, laser scan og IT tjenester.">
   <meta name="keywords" contnent="digitalisering, 3D scanning, landmåling, laser scan, landmåler, lidar">
   <link rel="stylesheet" href="/css/stylesheet.css">
+  <link rel="stylesheet" href="/css/projects.css">
   <link rel="icon" href="data:;base64,="/>
   <title>Smart Inspection | Prosjekter</title>
 </head>
 <body>
   <header>
-  </header>
+    <div class="logo-container">
+      <a href="index.html"><img class="header-logo" src="/images/LOGO-Smart-Inspection.svg" alt="Logo smart inspection text and illustraiton"></a>
+    </div>
+    <nav class="nav-bar">
+      <ul class="nav-menu">
+        <li class="nav-item">
+          <a href="index.html" id="active" class="nav-link">Hjem</a>
+        </li>
+        <li class="nav-item">
+          <a href="projects.html" class="nav-link">Prosjekter</a>
+        </li>
+        <li class="nav-item">
+          <a href="about.html" class="nav-link">Om oss</a>
+        </li>
+        <li class="nav-item">
+          <a href="contact.html" class="nav-link">Kontakt</a>
+        </li>
+      </ul>
+      <div class="hamburger-menu">
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+      </div>
+    </nav>
+</header>
   <main>
+    <div class="project-container">
       <section class="loader">test</section>
-      <div class="list-container"></div>
+      <button class="btn-filter">filter</button>
+      <div class="project-grid">
+      </div>
+      <button class="btn-more">Les mer</button>
+    </div>
   </main>
   <footer>
+    <div class="footer-container">
+      <div class="footer-left">&copy; 2016 Smart Inspection</div>
+      <div class="footer-center"><p>Ta kontakt:</p><span></span><a href="tel:+4738795840"></p>+47 38 79 58 40</p></a></div>
+      <div class="footer-right">
+        <a href="https://www.linkedin.com/company/smart-inspection/"><i class="fa-brands fa-facebook"></i></a>
+        <a href="https://www.facebook.com/smartinspection/"><i class="fa-brands fa-linkedin"></i></a>
+    </div>
+  </div>
   </footer>
   <script src="/js/projects.js" type="module"></script>
   <script src="/js/components/getapi.js" type="module"></script>
+  <script src="/js/script.js"></script>
 </body>
 </html>

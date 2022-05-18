@@ -17,10 +17,10 @@ import apiCall from "./components/getapi.js";
 async function wpPost() {
     try {
       const postData = await apiCall(wpIdPost);
-      postContainer.innerHTML = `<div>
+      postContainer.innerHTML = `<div id="container">
                                   <h2>${postData.title.rendered}</h2>
                                   <p>${postData.acf.paragraph}</p>
-                                  <img src="${postData.featured_media_src_url}"/>
+                                  <img id="image-zoom" src="${postData.featured_media_src_url}"/>
                                   </div>`;
     } catch (err) {
         console.log(err);
