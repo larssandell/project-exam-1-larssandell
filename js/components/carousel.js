@@ -1,7 +1,7 @@
 import apiCall from "./getapi.js";
 // apiCall(wpApi);
 
-const wpApi = "https://si.larssandell.no/wp-json/wp/v2/posts/";
+const wpApi = "https://si.larssandell.no/wp-json/wp/v2/posts?categories=1";
 const slideOne = document.querySelector(".one");
 const slideTwo = document.querySelector(".two");
 const slideThree = document.querySelector(".three");
@@ -19,23 +19,23 @@ async function getApiSlides() {
         // console.log(getSlides[i].id);
         // console.log(getSlides[i]);
         slideOne.innerHTML += `<a class="slide-link" href="/projectpost.html?id=${getSlides[i].id}">
-        <img class="slide-image" src="${getSlides[i].featured_media_src_url}"/>
+        <img class="slide-image" src="${getSlides[i].featured_media_src_url}" alt="${getSlides[i].acf.alt_text}"/>
         <h2 class="carousel-h2">${getSlides[i].title.rendered}</h2></a>`
       } else if (i === 1) {
         slideTwo.innerHTML += `<a class="slide-link" href="/projectpost.html?id=${getSlides[i].id}">
-        <img class="slide-image" src="${getSlides[i].featured_media_src_url}"/>
+        <img class="slide-image" src="${getSlides[i].featured_media_src_url}" alt="${getSlides[i].acf.alt_text}"/>
         <h2 class="carousel-h2">${getSlides[i].title.rendered}</h2></a>`
       }else if (i === 2) {
         slideThree.innerHTML += `<a class="slide-link" href="/projectpost.html?id=${getSlides[i].id}">
-        <img class="slide-image" src="${getSlides[i].featured_media_src_url}"/>
+        <img class="slide-image" src="${getSlides[i].featured_media_src_url}" alt="${getSlides[i].acf.alt_text}"/>
         <h2 class="carousel-h2">${getSlides[i].title.rendered}</h2></a>`
       }else if (i === 3) {
         slideFour.innerHTML += `<a class="slide-link" href="/projectpost.html?id=${getSlides[i].id}">
-        <img class="slide-image" src="${getSlides[i].featured_media_src_url}"/>
+        <img class="slide-image" src="${getSlides[i].featured_media_src_url}" alt="${getSlides[i].acf.alt_text}"/>
         <h2 class="carousel-h2">${getSlides[i].title.rendered}</h2></a>`
       }else if (i === 4) {
         slideFive.innerHTML += `<a class="slide-link" href="/projectpost.html?id=${getSlides[i].id}">
-        <img class="slide-image" src="${getSlides[i].featured_media_src_url}"/>
+        <img class="slide-image" src="${getSlides[i].featured_media_src_url}" alt="${getSlides[i].acf.alt_text}"/>
         <h2 class="carousel-h2">${getSlides[i].title.rendered}</h2></a>`
       }
     }
