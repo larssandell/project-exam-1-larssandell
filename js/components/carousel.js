@@ -45,11 +45,11 @@ getApiSlides()
 
 // Carousel slider
 const carousel = document.querySelector(".carousel")
-let slideIndex = 0;
+
 const slides = Array.from(carousel.children);
-console.log(slides);
+// console.log(slides);
 const slidesLen = slides.length;
-console.log(slidesLen);
+// console.log(slidesLen);
 const btnNext = document.getElementById("button-next");
 const btnPrev = document.getElementById("button-prev");
 
@@ -58,12 +58,13 @@ const navigation = document.querySelector(".navigation");
 const dots = Array.from(navigation.children);
 console.log(dots);
 const dot = document.querySelector(".dot");
+let slideIndex = 0;
 
 // next and prev buttons
-btnNext.addEventListener("click", function() {
+btnNext.addEventListener("click", () => {
   moveNext();
 });
-btnPrev.addEventListener("click", function() {
+btnPrev.addEventListener("click", () => {
   movePrev();
 });
 

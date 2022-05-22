@@ -1,13 +1,7 @@
-* {
-    box-sizing: border-box;
-}
-
 .project-container {
     max-width: 100rem;
     margin: auto;
     margin: 0 10px;
-    /* background: green; */
-    /* background-color: var(--header); */
     border-radius: 10px;
 }
 
@@ -15,7 +9,6 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
     gap: 5px;
-    /* background: orange; */
     margin: 10px 0;
     border-radius: 10px;
 }
@@ -46,13 +39,12 @@
     aspect-ratio: 1.5 / 1;
     object-fit: cover;
     border-radius: 10px;
+    transition: .3s ease-in-out;
 }
-button {
-    width: 60px;
-    height: 20px;
-    cursor: pointer;
-    background: teal;
-    border-radius: 5px;
+.project-img:hover {
+    opacity: 0.8;
+
+
 }
 .btn-more {
     display: block;
@@ -63,4 +55,23 @@ button {
     margin-left: auto;
     /* margin-right: 10px; */
     justify-content: center;
+}
+.project-container input {
+    border: none;
+    border-radius: 10px;
+    padding: 0 10px;
+}
+.project-container ::placeholder {
+    text-align: center;
+}
+.project-container input:focus {
+    outline: 0;
+}
+
+@media only screen and (min-width: 1000px) {
+    .project-grid {
+        gap: 15px;
+        margin: 10px 0;
+    }
+
 }

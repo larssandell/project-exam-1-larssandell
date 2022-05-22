@@ -11,7 +11,7 @@ const wpIdPost = "https://si.larssandell.no/wp-json/wp/v2/posts/" + id;
 console.log(wpIdPost)
 
 const postContainer = document.querySelector(".post-container");
-const loader = document.querySelector(".loader")
+// const loader = document.querySelector(".loader")
 
 
 async function wpPost() {
@@ -19,23 +19,16 @@ async function wpPost() {
       const postData = await apiCall(wpIdPost);
       document.title = `Smart Inspection | ${postData.title.rendered}`;
       postContainer.innerHTML = `<div id="container">
+                                  <div class="bg">
+                                  <img id="image-zoom" src="${postData.featured_media_src_url}" alt="${postData.acf.alt_text}"/>
+                                  </div>
+                                  <div class="bg content">
                                   <h2>${postData.title.rendered}</h2>
-                                  <p>${postData.acf.paragraph}</p>
-                                  <img id="image-zoom" src="${postData.featured_media_src_url}"/>
-                                  </div>`;
+                                  <p>${postData.acf.paragraph}</p> 
+                                 </div></div>`;
       zoomImages();
     } catch (err) {
         console.log(err);
     }
   }
   wpPost();
-  
-
-// function createHtml(wpPost) {
-//     console.log(wpPost);
-//     console.log("object");
-
-// }
-
-{/* <p>${postData.acf.paragraph}</p> */}
-{/* <div>${postData.content.rendered}</div> */}

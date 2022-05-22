@@ -7,43 +7,49 @@
   <meta name="keywords" contnent="digitalisering, 3D scanning, landmåling, laser scan, landmåler, lidar">
   <link rel="stylesheet" href="/css/stylesheet.css">
   <link rel="stylesheet" href="/css/projects.css">
+  <script src="https://kit.fontawesome.com/e3a2829c16.js" crossorigin="anonymous"></script>
   <link rel="icon" href="data:;base64,="/>
   <title>Smart Inspection | Prosjekter</title>
 </head>
 <body>
   <header>
-    <div class="logo-container">
-      <a href="index.html"><img class="header-logo" src="/images/LOGO-Smart-Inspection.svg" alt="Logo smart inspection text and illustraiton"></a>
+    <div class="header-container">
+        <div class="logo-container">
+          <a href="index.html"><img class="header-logo" src="/images/smart-inspection-white.png" alt="Logo smart inspection text and illustraiton"></a>
+        </div>
+        <nav class="nav-bar">
+          <ul class="nav-menu">
+            <li class="nav-item">
+              <a href="index.html" class="nav-link">Hjem</a>
+            </li>
+            <li class="nav-item">
+              <a href="projects.html" id="active" class="nav-link">Prosjekter</a>
+            </li>
+            <li class="nav-item">
+              <a href="about.html" class="nav-link">Om oss</a>
+            </li>
+            <li class="nav-item">
+              <a href="contact.html" class="nav-link">Kontakt</a>
+            </li>
+          </ul>
+          <div class="hamburger-menu">
+            <span class="hamburger-bar"></span>
+            <span class="hamburger-bar"></span>
+            <span class="hamburger-bar"></span>
+          </div>
+        </nav>
     </div>
-    <nav class="nav-bar">
-      <ul class="nav-menu">
-        <li class="nav-item">
-          <a href="index.html" id="active" class="nav-link">Hjem</a>
-        </li>
-        <li class="nav-item">
-          <a href="projects.html" class="nav-link">Prosjekter</a>
-        </li>
-        <li class="nav-item">
-          <a href="about.html" class="nav-link">Om oss</a>
-        </li>
-        <li class="nav-item">
-          <a href="contact.html" class="nav-link">Kontakt</a>
-        </li>
-      </ul>
-      <div class="hamburger-menu">
-        <span class="hamburger-bar"></span>
-        <span class="hamburger-bar"></span>
-        <span class="hamburger-bar"></span>
-      </div>
-    </nav>
-</header>
+  </header>
   <main>
     <div class="project-container">
-      <section class="loader">test</section>
-      <button class="btn-filter">filter</button>
+      <section class="loader"></section>
+      <!-- <button class="btn-filter">filter</button> -->
+      <section id="searchbar-Container">
+        <input type="text" name="searchbar" id="searchbar" placeholder="search">
+      </section>
       <div class="project-grid">
       </div>
-      <button class="btn-more">Les mer</button>
+      <button class="btn-more">se mer</button>
     </div>
   </main>
   <footer>
