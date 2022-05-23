@@ -2,7 +2,7 @@ import apiCall from "./components/getapi.js";
 const listPost = document.querySelector(".project-grid");
 // const wpApi = "https://si.larssandell.no/wp-json/wp/v2/posts/";
 // api call to one catogorie
-const wpApi = "https://si.larssandell.no/swp-json/wp/v2/posts?categories=1";
+const wpApi = "https://si.larssandell.no/wp-json/wp/v2/posts?categories=1";
 // api call that includes 100 posts pr page
 const wpApiMore = "https://si.larssandell.no/wp-json/wp/v2/posts?categories=1&per_page=100";
 const loadMoreBtn = document.querySelector(".btn-more");

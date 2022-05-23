@@ -1,29 +1,10 @@
-/* .contact-container {
-    display: grid;
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-template-areas: 
-    "form"
-    "desc"
-    "location";
-}
-
-
-.contat-form {
-    grid-area: form;
-}
-.contact-description {
-    grid-area: desc;
-}
-.contact-location {
-    grid-area: location;
-} */
 iframe {
     border-radius: 10px;
     /* align-self: center; */
     width: 100%;
     /* height: auto; */
+    margin: 10px 0;
 }
-
 .main-container {
     position: relative;
     display: grid;
@@ -36,7 +17,7 @@ iframe {
     "loca";
 }
 .main-container div {
-    background-color: #f2f2f2;
+    background-color: var(--card);
     border-radius: 10px;
 
 }
@@ -44,19 +25,14 @@ iframe {
     margin-top: 10px;
 }
 .form-container, .contact-description, .contact-location {
-    box-shadow: 5px 5px 2px 0px rgba(0,0,0,0.2);
-    border-left: 1px solid green;
+    box-shadow: var(--boxshadow);
 }
 .contact-description {
-    /* background-color: #f2f2f2;
-    border-radius: 10px; */
     grid-area: desc;
 }
-
 .contact-location {
-    /* background-color: #f2f2f2;
-    border-radius: 10px; */
     grid-area: loca;
+    margin-bottom: 20px;
 }
 p {
     margin: 5px 10px;
@@ -75,14 +51,7 @@ p {
     display: flex;
     grid-area: form;
 }
-
-/* #form {
-    background-color: #f2f2f2;
-    border-radius: 10px;
-    padding: 10px;
-} */
 #form {
-    background-color: #f2f2f2;
     border-radius: 10px;
     padding: 10px;
     width: 90%;
@@ -136,13 +105,13 @@ h1, h2 {
     margin-top: 10px;
 }
 /* info box */
-
-
 #message {
     height: 80px;
 }
-
-
+textarea {
+    border-radius: 10px;
+    padding: 5px 10px;
+}
 
 /* at media */
 @media only screen and (min-width: 768px) {
@@ -153,6 +122,7 @@ h1, h2 {
         grid-template-areas: 
         "form desc"
         "loca loca";
+        margin: 0 10%;
     }
     .form-box .error-form {
         height: 10px;

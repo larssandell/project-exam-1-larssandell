@@ -16,15 +16,18 @@ html {
 }
 :root {
     --header: #EE8E13;
-    --main-bg: #E5E5E5;
+    /* --main-bg: #f2f2f2; */
+    --main-bg: #000000e6;
     --footer: #0D0D0D;
-    --card: #f2f2f2;
+    --card: #eeeeee;
     --blue: #263C6D;
     --green: #64C133;
     --test: #2A3C52;
     --font-headline: "PTSans", arial, sans-serif;
-    /* --font-para: 'Roboto', sans-serif; */
-    --font-para: "HindGuntur", sans-serif;
+    --font-para: 'Roboto', sans-serif;
+    /* --boxshadow: 2px 2px 1px 0px rgba(0,0,0,0.2); */
+    --boxshadow: 2px 2px 1px 0px rgba(255,255,255,1);
+    /* --font-para: "HindGuntur", sans-serif; */
 }
 /* .main-container {
     display: block;
@@ -37,15 +40,14 @@ html {
 body {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 0.1fr 1fr 1fr 0.1fr;
+    grid-template-rows: 0.1fr 1fr 1fr auto;
     grid-template-areas:
         "header header header"
         "main main main"
         "main main main"
         "footer footer footer";
     min-height: 100vh;
-    color: #ffff;
-    background-color: #E5E5E5;
+    background-color: var(--main-bg);
 }
 header {
     grid-area: header;
@@ -60,7 +62,6 @@ header {
 }
 main {
     grid-area: main;
-    background-color: var(--main-bg);
     color: #000;
     
 }
@@ -103,38 +104,20 @@ label {
     position: relative;
   }
   
-  .logo-container {
-    /* margin: auto; */
-    /* // trenger ikke */
+.logo-container {
     margin-left: 10px;
-  }
+}
   
   
-  .nav-bar {
+.nav-bar {
     /* padding-right: 10px; */
     position: absolute;
     right: 10px;
     top: 35%; 
     /* ved større skjermer ta top lengre ned */
     text-align: center;
-  }
+}
 
-/* old */
-/* .header-container {
-    display: grid;
-    grid-template-columns: auto;
-}
-.logo-container {
-    margin: auto
-}
-.nav-bar {
-    min-height: 70px;
-    color: fff;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-right: 10px;
-} */
 .nav-menu {
     display: flex;
     justify-content: space-between;
@@ -189,25 +172,23 @@ li {
     margin: 10% auto;
 }
 
-
-/* .service-container {
-    position: relative;
-    margin: 0 auto;
-}
-.services {
-    display: block;
-    margin: auto;
-} */
 .card-container {
     display: grid;
     grid-template-rows: repeat( auto-fit, 1fr ); /* funker bedre uten auto-fit */
     grid-template-areas: 
     "img headline"
     "img text";
-    background-color: brown;
+    background-color: var(--card);
     border-radius: 10px;
-    box-shadow: 5px 5px 2px 0px rgba(0,0,0,0.2);
+    box-shadow: var(--boxshadow);
     margin: 8px 10px;
+    /* transition: all 10ms ease-out; */
+}
+.card-container:hover,
+.card-container:focus {
+    box-shadow: 0px 0px 1px 1px rgba(0,0,0,0.33);
+    /* transition: all 10ms; */
+
 }
 .image {
     display: block;
@@ -226,7 +207,6 @@ li {
 }
 .card-image:hover {
     opacity: 0.8;
-    transition: all ease-in-out 100ms;
 }
 .card-headline {
     grid-area: headline;
@@ -267,6 +247,7 @@ li {
     height: auto;
     display: block;
     margin: auto;
+    border-radius: 10px;
 }
 
 
@@ -311,10 +292,11 @@ footer {
     grid-area: two;
     text-align: center;
     justify-content: center;
-    font-size: 0.5rem;
   }
   .footer-center p {
-      font-size: 0.9rem;
+      font-size: 0.8rem;
+      display: flex;
+      flex-direction: column;
   }
   .footer-right {
     grid-area: three;
@@ -324,7 +306,6 @@ footer {
 .footer-container div {
     display: flex;
     align-items: center;
-    /* margin: auto; */
 }
 footer a {
     text-decoration: none;
@@ -333,8 +314,7 @@ footer a {
 }
 .fa-brands {
     color: #fff;
-    font-size: 25px;
-    
+    font-size: 1.5rem;    
 }
 .fa-brands:hover {
     transform: rotate(-25deg);
@@ -343,6 +323,9 @@ footer a {
 }
 .fa-facebook {
     margin-left: 5px;
+}
+.fa-facebook:hover {
+    transform: rotate(+25deg);
 }
 
 /* error catch */
@@ -438,5 +421,59 @@ footer a {
     label {
         font-size: 1.5rem;
     }
+    .nav-menu a {
+        font-size: 1.3rem;
+    }
+
+    .card-image {
+        width: 200px;
+      }
+    .logo-container {
+        margin-left: 10%;
+    }
+    .card-container {
+        margin: 20px 10%;
+    }
+    .card-container p {
+        font-size: 1.1rem;
+    }
+    .card-container h2 {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+    }
+    .logo-container,
+    .header-logo {
+        margin-left: 10%;
+    }
+    .nav-bar {
+        right: 10%;
+    }
+        /* footer */
+    .fa-brands {
+        font-size: 1.8rem;    
+    }
+    .footer-center p {
+        font-size: 1rem;
+    }
+    .footer-left {
+        font-size: 0.8rem;
+      }
+    .footer-container div {
+        margin: auto;
+    }
+
+
+}
+@media only screen and (min-width: 1200px) {
+    .nav-menu a {
+        font-size: 1.6rem;
+    }
+    .card-container p {
+        margin: 10px 20px;
+    }
+    .card-image {
+        width: 350px;
+      }
+
 
 }
