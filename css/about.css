@@ -15,7 +15,6 @@
 }
 .client {
     margin: auto;
-
 }
 .logo-img {
     filter: grayscale(100%);
@@ -37,6 +36,16 @@
     background-color: var(--card);
     border-radius: 10px;
     box-shadow: var(--boxshadow);
+}
+.about-img {
+    display: block;
+    margin: auto;
+    width: 200px;
+    height: auto;
+    padding: 20px 0;
+}
+.about-container h1 {
+    color: #fff;
 }
 .about p {
     margin: 10px 10px;
@@ -61,6 +70,9 @@
     }
     .about-container hr {
         width: 90%;
+    }
+    .about p {
+        margin: 20px 30px;
     }
 
 }

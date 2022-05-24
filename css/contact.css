@@ -103,6 +103,8 @@ h1, h2 {
     width: 150px;
     height: 25px;
     margin-top: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
 }
 /* info box */
 #message {
@@ -143,6 +145,12 @@ textarea {
     }
     .contact-description div {
         margin: 25px 25px;
+    }
+    .btn-submit {
+        align-self: center;
+        width: 200px;
+        height: 35px;
+        margin-top: 10px;
     }
 
 

@@ -71,9 +71,6 @@ btnPrev.addEventListener("click", () => {
 
 
 // function to move and update dots and slides
-// i could use "for (let i = 0; i > slides.length; i++)" insted of let slide of slides" but i dont see a reason for it
-// the forloop removes the active slide class name and sets it to hidden, then adds active to the next slide
-// where the active is displayed block and hidden is displayed none. and updates the slideIndex counter
 function updateMove() {
   slide.forEach(element => {
     element.classList.remove("slide-active");
@@ -90,8 +87,6 @@ function updateDots() {
   })
   dots[slideIndex].classList.add("nav-active");
 };
-// move function if slideIndex is === to slidesLen (the slides array 0,1,2,3,4) if you go pass 5 you loop back to the first index 0
-// else go to the next slideIndex (++) 
 function moveNext() {
   if (slideIndex === slidesLen - 1) {
     slideIndex = 0;
