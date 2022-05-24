@@ -3,164 +3,99 @@ const formName = document.getElementById("name");
 const formEmail = document.getElementById("email");
 const formMsgType = document.getElementById("msgtype");
 const formSubject = document.getElementById("subject");
+const formMessage = document.getElementById("message");
+const btnSubmit = document.querySelector(".btn-submit");
+const formSuccess = document.querySelector(".validation-success");
 
-function submitForm(e) {
-    e.defaultPrevented();
 
-    form.reset();
-} 
-form.addEventListener("submit", submitForm);
+// error and success messages
+const error = (element, message) => {
+    // endre navn på inputControl og errorDispay
+    const inputControl = element.parentElement;
+    const errorDisplay = inputControl.querySelector('.error-form');
 
-// form.addEventListener("submit", e => {
-//     e.defaultPrevented();
+    errorDisplay.innerText = message;
+    inputControl.classList.add('error');
+    inputControl.classList.remove('success');
+};
 
-//     validateForm();
+const success = element => {
+    const inputControl = element.parentElement;
+    const errorDisplay = inputControl.querySelector('.error-form');
 
-// });
+    errorDisplay.innerText = '';
+    inputControl.classList.add('success');
+    inputControl.classList.remove('error');
+};
 
-const setInputError = (element, msg) => {
-    const inputVali = element.parentElement;
-    const errorMsg = inputVali.queryselector(".error");
+// Form validation and eventlistner
 
-    errorMsg.innerHtml = msg;
-    inputVali.classList.add("error");
-    inputVali.classList.remove("success");
-
-}
-
-const setInputOk = element => {
-    const inputVali = element.parentElement;
-    const errorMsg = inputVali.queryselector(".error");
-
-    errorMsg.innerHtml = "";
-    inputVali.classList.add("success");
-    inputVali.classList.remove("error");
-}
-
-function emailValidation(email){
-    // denne burde være nokså sikker, har også lagt til valgfri andre dommene tilfelle co.uk etc
-    const regEx = /^([a-zA-Z0-9-_\.]+)@([a-z-?]+)\.([a-z]{2,6})(\.[a-z]{2,4})?/g;
-    const emailMatche = regEx.test(email);
-    return emailMatche(String(email).toLocaleLowerCase());
-}
-
-const validateForm = () => {
-    const nameInput = formName.value.trim().toLocaleLowerCase();
-    const emailInput = formemail.value.trim().toLocaleLowerCase();
-    const msgTypeInput = formMsgType.value.trim().toLocaleLowerCase();
-    const subjectInput = formSubject.value.trim().toLocaleLowerCase();
-
-    if (nameInput > 4) {
-        setInputError(formName, "Name must be more then 5 characters");
+form.addEventListener("submit", (e) =>  {
+    e.preventDefault();
+    let count = 0;
+    if (checkForm(formName.value, 6)) {
+        error(formName, "Name must be more then 5 characters long");
     } else {
-        setInputOk(formName);
+        success(formName);
+        count++;
     }
-    if (emailInput === "") {
-        setInputError(formEmail, "Must be a valid email");
-    } else if (!emailValidation(email)) {
-        setInputError(formEmail, "Must be a valid email");
+
+    if (emailValidation(formEmail.value)) {
+        success(formEmail);
+        count++;
     } else {
-        setInputOk(formEmail);
+        error(formEmail, "Provide a valid email address");
     }
-}
-
-
-function validateForm() {
-    const nameInput = formName.value.trim().toLocaleLowerCase();
-    const emailInput = formemail.value.trim().toLocaleLowerCase();
-    const msgTypeInput = formMsgType.value.trim().toLocaleLowerCase();
-    const subjectInput = formSubject.value.trim().toLocaleLowerCase();
-
-    if (checkForm(formName.value, 4)) {
-        setInputError(formName, "Name must be more then 5 characters");
+    
+    if (checkForm(formSubject.value, 6)) {
+        error(formSubject, "Subject must be more then 4 characters long");
     } else {
-        setInputOk(formName);
+        success(formSubject);
+        count++;
     }
-    if (emailValidation(email.value)) {
 
-    }
-}
-
-function checkForm(value, leng) {
-    if (value.trim().toLocaleLowerCase().length >= leng) {
-        return true;
+    if (checkForm(formMessage.value, 26)) {
+        error(formMessage, "Message must be more than 25 characters long");
     } else {
-        return false;
+        success(formMessage);
+        count++;
     }
-}
-
-
-
-if (formEmail === "") {
-    setError(formEmail, "Email is required");
-} else if (!emailValidation(formEmail)) {
-    setError(formEmail, "Provide a valid email address");
-} else if (emailValidation(formEmail)) {
-    setSuccess(formEmail);
-}
-
-
-
-
-
-
-const form = document.querySelector("#contact-form");
-const formsucess = document.querySelector(".form-sucess")
-const fullName = document.querySelector("#name");
-const nameErr = document.querySelector("#err-name");
-const subject = document.querySelector("#subject");
-const subjectErr = document.querySelector("#err-sub");
-const email = document.querySelector("#email");
-const emailErr = document.querySelector("#err-email");
-const btnSubmit = document.querySelector(".submit-btn");
-
-
-if(emailValue === '') {
-    setError(email, 'Email is required');
-} else if (!isValidEmail(emailValue)) {
-    setError(email, 'Provide a valid email address');
-} else {
-    setSuccess(email);
-}
-
-
-if (checkForm(formSubject.value, )
-
-// required i html fungerer ikke sammen med javascript, den vil
-// aktivere submit selv om du ikke har skrevet noe der, men får feil når du trykker
-function valiForm() {
-    if(checkForm(fullName.value, 1) && checkForm(subject.value, 9) && emailValidation(email.value)) {
-        btnSubmit.disabled = false;
-    } else {
-        formsucess.innerHTML = "";
-        btnSubmit.disabled = true;
+    // console.log(count);
+    if (count === 4) {
+        form.reset();
+        return formSuccess.innerHTML = `<h2 class="h2-success">Message is recived, thank you<h2>`;
     }
-}
-fullName.addEventListener("keyup", valiForm);
-subject.addEventListener("keyup", valiForm);
-email.addEventListener("keyup", valiForm);
+});
 
-function submitForm(event) {
-    event.preventDefault();
-    formsucess.innerHTML = `<h3 class="ok">The form has been sent</h3>`;
-    form.reset();
-
-}
-
-form.addEventListener("submit", submitForm);
-
+// form validation function for less repeat
 function checkForm(value, leng) {
     if (value.trim().length >= leng) {
-        return true;
-    } else {
         return false;
+    } else {
+        return true;
     }
-}
+};
 
+
+//testing keyup 
+// formName.addEventListener("keyup", logKey);
+// function logKey(e) {
+//     console.log(`${e.code}`);
+// }
+
+// RegEx email validation
 function emailValidation(email){
     // denne burde være nokså sikker, har også lagt til valgfri andre dommene tilfelle co.uk etc
     const regEx = /^([a-zA-Z0-9-_\.]+)@([a-z-?]+)\.([a-z]{2,6})(\.[a-z]{2,4})?/g;
     const emailMatche = regEx.test(email);
     return emailMatche;
-}
+};
+
+
+
+
+
+
+
+
 

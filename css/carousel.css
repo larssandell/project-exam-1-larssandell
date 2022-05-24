@@ -18,10 +18,10 @@
     transition:all 3000ms ease-in-out;
 }
 .carousel .slide,
-.carousel .carousel__item--hidden {
+.carousel .slide-hidden {
     display: none;
 }
-.carousel .item-active {
+.carousel .slide-active {
     display: block;
     transition: all;
 }
@@ -47,9 +47,9 @@
     right: 0;
     padding: 5px;
     border-radius: 10px;
-  }
+}
 
-/* carusel dots */
+/* carusel dots navigation */
 .navigation{
     display: flex;
     justify-content: center;
@@ -105,12 +105,7 @@
     background: rgba(255, 255, 255, 0.6); 
 }
 
-
-
-
-
-
-
+/* Media Q */
 @media only screen and (min-width: 768px)  {
     .carousel-container {
         height: 400px;

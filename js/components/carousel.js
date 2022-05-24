@@ -39,14 +39,14 @@ async function getApiSlides() {
         <h2 class="carousel-h2">${getSlides[i].title.rendered}</h2></a>`
       }
     }
-  }catch (e) {}
-}
-getApiSlides()
+  }catch (err) {}
+};
+getApiSlides();
 
 // Carousel slider
-const carousel = document.querySelector(".carousel")
-
+const carousel = document.querySelector(".carousel");
 const slides = Array.from(carousel.children);
+const slide = document.querySelectorAll(".slide");
 // console.log(slides);
 const slidesLen = slides.length;
 // console.log(slidesLen);
@@ -56,11 +56,12 @@ const btnPrev = document.getElementById("button-prev");
 // dot navigation
 const navigation = document.querySelector(".navigation");
 const dots = Array.from(navigation.children);
-console.log(dots);
-const dot = document.querySelector(".dot");
+const dot = document.querySelectorAll(".dot");
+// console.log(dots);
+// const dot = document.querySelector(".dot");
 let slideIndex = 0;
 
-// next and prev buttons
+// next and prev buttons move
 btnNext.addEventListener("click", () => {
   moveNext();
 });
@@ -70,22 +71,27 @@ btnPrev.addEventListener("click", () => {
 
 
 // function to move and update dots and slides
+// i could use "for (let i = 0; i > slides.length; i++)" insted of let slide of slides" but i dont see a reason for it
+// the forloop removes the active slide class name and sets it to hidden, then adds active to the next slide
+// where the active is displayed block and hidden is displayed none. and updates the slideIndex counter
 function updateMove() {
-  for (let slide of slides) {
-    slide.classList.remove("item-active");
-    slide.classList.add("item-hidden");
-  }
-  slides[slideIndex].classList.add("item-active");
-}
+  slide.forEach(element => {
+    element.classList.remove("slide-active");
+    element.classList.add("slide-hidden");
+  });
+  slides[slideIndex].classList.add("slide-active");
+};
+
 
 function updateDots() {
-  for (let dot of dots) {
-   dot.classList.remove("nav-active");
-   dot.classList.add("nav-hidden");
-  }
+  dot.forEach(dot => {
+    dot.classList.remove("nav-active");
+    dot.classList.add("nav-hidden");
+  })
   dots[slideIndex].classList.add("nav-active");
-}
-
+};
+// move function if slideIndex is === to slidesLen (the slides array 0,1,2,3,4) if you go pass 5 you loop back to the first index 0
+// else go to the next slideIndex (++) 
 function moveNext() {
   if (slideIndex === slidesLen - 1) {
     slideIndex = 0;
@@ -94,7 +100,7 @@ function moveNext() {
   }
   updateMove();
   updateDots();
-}
+};
 function movePrev() {
   if (slideIndex === 0) {
     slideIndex = slidesLen - 1;
@@ -103,19 +109,13 @@ function movePrev() {
   }
   updateMove();
   updateDots();
-}
-function moveDots() {
-  
-}
+};
 
-//Auto play the carousel
-// setInterval(function() {
-//   moveNext();
-// }, 6000);
+function autoPlay() {
+  moveNext();
+}
+setInterval(autoPlay, 6000);
 
-carousel.addEventListener("mouseover", () =>  {
-  clearInterval();
-})
 
 
 

@@ -14,7 +14,7 @@ hamburgerMenu.addEventListener("click", () => {
     navMenu.classList.toggle("active");
 })
 
-document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", () => {
+document.querySelectorAll(".nav-link").forEach(event => event.addEventListener("click", () => {
     hamburgerMenu.classList.remove("active");
     navMenu.classList.remove("active");
 }));
@@ -26,7 +26,7 @@ async function wpServiceList() {
       const getService = await apiCall(wpApiService);
       // console.log(getPosts);
       for (let i = 0; i < getService.length; i++) {
-          console.log(getService);
+          // console.log(getService);
           serviceContainer.innerHTML += `<div class="card-container">
                                          <div class="card-image"><img id="image-zoom" class="image" src="${getService[i].featured_media_src_url}" alt="${getService[i].acf.alt_text}"></div>
                                          <div class="card-headline"><h2>${getService[i].title.rendered}</h2></div>

@@ -8,10 +8,10 @@ async function wpLogos() {
       const getLogo = await apiCall(wpApiClient);
       // console.log(getPosts);
       for (let i = 0; i < getLogo.length; i++) {
-          console.log(getLogo);
+          // console.log(getLogo);
           customers.innerHTML += `<div class="client"><img class="logo-img" src="${getLogo[i].featured_media_src_url}" alt="${getLogo[i].acf.alt_text}"></div>`;
       }
     } catch (err) {}
-  }
+};
   
-  wpLogos();
+wpLogos();

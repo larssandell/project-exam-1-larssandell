@@ -3,15 +3,13 @@ import zoomImages from "./components/zoomimg.js";
 
 const qs = document.location.search;
 const params = new URLSearchParams(qs);
-console.log(params);
+// console.log(params);
 const id = params.get("id");
 
-console.log(id);
+// console.log(id);
 const wpIdPost = "https://si.larssandell.no/wp-json/wp/v2/posts/" + id;
-console.log(wpIdPost)
-
+// console.log(wpIdPost)
 const postContainer = document.querySelector(".post-container");
-// const loader = document.querySelector(".loader")
 
 
 async function wpPost() {
@@ -30,5 +28,6 @@ async function wpPost() {
     } catch (err) {
         console.log(err);
     }
-  }
-  wpPost();
+  };
+
+wpPost();

@@ -3,12 +3,10 @@ export default function zoomImages() {
     zoomBackground.id = "zoom-bg";
     document.body.appendChild(zoomBackground);
     const popupImages = document.querySelectorAll("#image-zoom");
-    // const oneImage = document.getElementById("image-zoom");
-    // const container = document.querySelector(".container");
 
     popupImages.forEach(image => {
-        console.log(image, "her er jeg nå image");
-        image.addEventListener("click", e => {
+        // console.log(image, "her er jeg nå image");
+        image.addEventListener("click", () => {
             // testing click
             // console.log("found target!");
     
@@ -32,7 +30,7 @@ export default function zoomImages() {
         })
     });
     // Closeing the popup
-    zoomBackground.addEventListener("click", e => {
+    zoomBackground.addEventListener("click", () => {
         zoomBackground.classList.remove("popup");
 });
-}
+};

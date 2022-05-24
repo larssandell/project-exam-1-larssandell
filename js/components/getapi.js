@@ -17,8 +17,6 @@ export default async function apiCall(urlApi) {
                           <p>Vi har problemer med ${err}</p>
                           <a href="index.html"><button class="back-btn">Tilbake til forsiden</button></a>
                           </div>`;
-
-      // loader.innerHTML = "Error404";
       console.log("Her er feilen: ", err);
   }
-}
+};

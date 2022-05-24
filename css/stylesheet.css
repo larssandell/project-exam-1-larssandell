@@ -26,15 +26,9 @@ html {
     --font-headline: "PTSans", arial, sans-serif;
     --font-para: 'Roboto', sans-serif;
     /* --boxshadow: 2px 2px 1px 0px rgba(0,0,0,0.2); */
-    --boxshadow: 2px 2px 1px 0px rgba(255,255,255,1);
+    --boxshadow: 2px 2px 1px 0px rgba(0, 0, 0, 0.6);
     /* --font-para: "HindGuntur", sans-serif; */
 }
-/* .main-container {
-    display: block;
-    margin: auto;
-    padding: auto;
-    box-sizing: border-box;
-} */
 
 /* Main Grid */
 body {
@@ -244,7 +238,7 @@ li {
 }
 #popupImage {
     width: 80vw;
-    height: auto;
+    height: 80vh;
     display: block;
     margin: auto;
     border-radius: 10px;
