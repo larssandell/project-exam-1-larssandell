@@ -7,7 +7,7 @@ export default async function apiCall(urlApi) {
   try {
     const response = await fetch(urlApi);
     const data = await response.json();
-    // console.log(data);
+    console.log(data);
     loader.style.display = "none";
     return data;
   } catch (err) {

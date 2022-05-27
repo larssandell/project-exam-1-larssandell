@@ -12,7 +12,7 @@ const navMenu = document.querySelector(".nav-menu");
 hamburgerMenu.addEventListener("click", () => {
     hamburgerMenu.classList.toggle("active");
     navMenu.classList.toggle("active");
-})
+});
 
 document.querySelectorAll(".nav-link").forEach(event => event.addEventListener("click", () => {
     hamburgerMenu.classList.remove("active");
@@ -24,7 +24,7 @@ document.querySelectorAll(".nav-link").forEach(event => event.addEventListener("
 async function wpServiceList() {
     try {
       const getService = await apiCall(wpApiService);
-      // console.log(getPosts);
+      // console.log(getService);
       for (let i = 0; i < getService.length; i++) {
           // console.log(getService);
           serviceContainer.innerHTML += `<div class="card-container">
@@ -35,6 +35,6 @@ async function wpServiceList() {
       }
       zoomImages();
     } catch (err) {}
-  }
+  };
   
   wpServiceList();

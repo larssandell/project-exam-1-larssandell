@@ -47,14 +47,18 @@
 
 
 }
+#filter-container {
+    display: flex;
+    flex-direction: row;
+}
 .btn-more {
     display: block;
     margin: auto;
 }
 .btn-filter {
+    width: 70px;
     display: block;
-    margin-left: auto;
-    /* margin-right: 10px; */
+    margin-right: 10px;
     justify-content: center;
 }
 .project-container input {
