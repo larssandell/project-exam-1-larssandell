@@ -14,16 +14,16 @@ html {
     width: 100%;
 }
 :root {
-    --header: #EE8E13;
-    --main-bg: #000000e6;
+    --header: #2A3C52;
+    --main-bg: #f6f6f6e3;
     --footer: #0D0D0D;
-    --card: #eeeeee;
-    --blue: #263C6D;
-    --green: #64C133;
-    --test: #2A3C52;
+    --card-bg: #fff;
+    --btn-bg-hover: #285E85;
+    --btn-bg: #263C6D;
     --font-headline: "PTSans", arial, sans-serif;
-    --font-para: 'Roboto', sans-serif;
+    --font-para: 'HindGuntur', sans-serif;
     --boxshadow: 2px 2px 1px 0px rgba(0, 0, 0, 0.6);
+    --bg-white: #f2f2f2;
 }
 
 /* Main Grid */
@@ -37,11 +37,11 @@ body {
         "main main main"
         "footer footer footer";
     min-height: 100vh;
-    background-color: var(--main-bg);
+    background-color: #f6f6f6e3;
 }
 header {
     grid-area: header;
-    background-color: var(--test);
+    background-color: var(--header);
     font-family: "PTSans-bold";
     font-size: 20px;
     display: flex;
@@ -75,6 +75,10 @@ p {
 label {
     font-family: var(--font-para);
 }
+header a {
+    font-family: var(--font-headline);
+    font-weight: 500;
+}
 
 /* header - logo */
 .header-logo {
@@ -104,9 +108,6 @@ label {
 }
 .nav-menu {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 10px;
 }
 li {
     list-style-type: none;
@@ -119,16 +120,18 @@ li {
 
 /* hover link */
 .nav-link {
-    transition: 0.5s ease-in;
+    transition: 0.2s ease-in;
     padding: 10px 10px;
 }
 .nav-link:hover {
     box-shadow: #fff 1px 1px;
-    transition: 0.5s ease-in;
+    transition: 0.2s ease-in;
+    border-radius: 10px;
     
 }
 #active {
     box-shadow: #fff 1px 1px;
+    border-radius: 10px;
 }
 .hamburger-menu {
     display: none;
@@ -160,10 +163,9 @@ li {
     grid-template-areas: 
     "img headline"
     "img text";
-    background-color: var(--card);
+    background-color: var(--card-bg);
     border-radius: 10px;
     margin: 8px 10px;
-    box-shadow: var(--boxshadow);
 }
 .card-container:hover,
 .card-container:focus {
@@ -221,26 +223,36 @@ li {
 }
 #popupImage {
     width: 80vw;
-    height: 60vh;
+    height: 30vh;
     display: block;
     margin: auto;
     border-radius: 10px;
+}
+.exit-zoom::after {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f00d";
+    position: absolute;
+    right: 5vw;
+    top: 38%;
+    color: #fff;
+    font-size: 25px;
+    text-align: center;
 }
 button {
     box-sizing : content-box;
     cursor: pointer;
     border-radius: 5px;
     border: 1px solid transparent;
-    background-color:rgba(255, 255, 255, 0.8);
-    transition: all 0.2s;
+    background-color: var(--btn-bg);
+    transition: all 4ms ease-in;
+    color: #fff;
     width: 60px;
     height: 20px;
     font-family: var(--font-para);
 }
 button:hover {
-    background-color: var(--blue);
-    color: #fff;
-    border: 1px solid rgba(255, 255, 255, 0.308);
+    background-color: var(--btn-bg-hover);
 }
 
 /* Footer */
@@ -375,15 +387,28 @@ footer a {
         border: none;
         box-shadow: none;
     }
+    .card-container {
+        grid-template-areas: 
+        "img img"
+        "headline headline" 
+        "text text";
+        row-gap: 20px;
+    }
+    .card-image {
+        width: 100%;
+        align-items: center;
+        height: 200px;
+        object-fit: cover;
+        object-position: center;
+    }
+    .service-container {
+        margin-top: 20px;
+    }
     #active {
         box-shadow: #fff 1px 1px;
     }
     #popupImage {
-        width: 50vw;
-        height: 30vh;
-        display: block;
-        margin: auto;
-        border-radius: 10px;
+        height: 20vh;
     }
 }
 @media only screen and (min-width: 768px) {
@@ -398,6 +423,10 @@ footer a {
     }
     label {
         font-size: 1.5rem;
+    }
+    header a {
+        font-family: var(--font-headline);
+        font-weight: 500;
     }
     .nav-menu a {
         font-size: 1.3rem;
@@ -442,6 +471,9 @@ footer a {
         width: 80px;
         height: 30px;
     }
+    .exit-zoom::after {
+        top: 33%;
+    }
 }
 @media only screen and (min-width: 1200px) {
     .nav-menu a {
@@ -456,6 +488,11 @@ footer a {
     .card-image {
         width: 350px;
     }
-
-
+    #popupImage {
+        height: 60vh;
+    }
+    .exit-zoom::after {
+        top: 17%;
+        font-size: 30px;
+    }
 }

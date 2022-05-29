@@ -3,6 +3,7 @@ export default function zoomImages() {
     zoomBackground.id = "zoom-bg";
     document.body.appendChild(zoomBackground);
     const popupImages = document.querySelectorAll("#image-zoom");
+    const exitZoom = document.querySelector(".exit-zoom");
 
     popupImages.forEach(image => {
         // console.log(image, "her er jeg nå image");
@@ -11,6 +12,7 @@ export default function zoomImages() {
             // console.log("found target!");
     
             // console.log(zoomBackground);
+            zoomBackground.classList.add("exit-zoom");
             zoomBackground.classList.add("popup");
     
             // checking if i get the class list popup added
@@ -19,6 +21,7 @@ export default function zoomImages() {
             const popupImage = document.createElement("img");
             popupImage.src = image.src;
             popupImage.id = "popupImage";
+
     
             // removing child so they dont stack on top of eachoter
             if (zoomBackground.firstChild) {

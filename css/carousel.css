@@ -116,6 +116,11 @@
 }
 
 /* Media Q */
+@media only screen and (max-width: 768px)  {
+    .carousel-h2 {
+        font-size: 1.7rem;
+    }
+}
 @media only screen and (min-width: 768px)  {
     .carousel-container {
         height: 400px;
@@ -126,8 +131,7 @@
     }
     .dot {
         margin: 0 12px;
-      }
-    
+    }    
 }
 @media only screen and (min-width: 1800px)  {
     .carousel-container {
@@ -140,7 +144,6 @@
     .dot {
         margin: 0 12px;
       }
-    
 }
 
 

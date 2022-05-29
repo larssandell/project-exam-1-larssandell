@@ -34,7 +34,8 @@ async function wpServiceList() {
                                          </div>`;
       }
       zoomImages();
-    } catch (err) {}
+    } catch (err) {
+    }
   };
   
   wpServiceList();

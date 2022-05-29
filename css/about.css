@@ -33,9 +33,8 @@
 }
 .about {
     margin: 10px 10px;
-    background-color: var(--card);
+    background-color: var(--card-bg);
     border-radius: 10px;
-    box-shadow: var(--boxshadow);
 }
 .about-img {
     display: block;
@@ -44,8 +43,16 @@
     height: auto;
     padding: 20px 0;
 }
+#logo-hover {
+    transition: all 0.5s ease-out;
+}
+#logo-hover:hover,
+#logo-hover:focus {
+    transform: scale(1.1);
+    cursor: pointer;
+}
 .about-container h1 {
-    color: #fff;
+    color: #000;
 }
 .about p {
     margin: 10px 10px;
