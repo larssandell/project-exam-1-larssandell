@@ -15,6 +15,7 @@ const postContainer = document.querySelector(".post-container");
 async function wpPost() {
     try {
       const postData = await apiCall(wpIdPost);
+      // console.log(postData);
       document.title = `Smart Inspection | ${postData.title.rendered}`;
       postContainer.innerHTML = `<div id="container">
                                   <div class="bg">

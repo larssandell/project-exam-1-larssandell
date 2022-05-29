@@ -54,16 +54,3 @@ async function loadMore() {
   }
 };
 
-// Filter 
-const filterNew = "test";
-const filterOld = "test2";
-
-const btnFilterNew = document.querySelector(".btn-filter-new");
-const btnFilterOld = document.querySelector(".btn-filter-old");
-
-// btnFilterNew.addEventListener("click", () => {
-
-// });
-// btnFilterOld.addEventListener("click", () => {
-
-// });
