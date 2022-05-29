@@ -16,7 +16,7 @@ async function wpPostList() {
     // console.log(getPosts);
     for (let i = 0; i < getPosts.length; i++) {
         // console.log(getPosts);
-        console.log(getPosts[i].date);
+        // console.log(getPosts[i].date);
         listPost.innerHTML += `<div class="project-card">
                                <a class="stacked" href="/projectpost.html?id=${getPosts[i].id}">
                                <img class="project-img" src="${getPosts[i].featured_media_src_url}" alt="${getPosts[i].acf.alt_text}">
@@ -41,7 +41,7 @@ async function loadMore() {
     const getPosts = await apiCall(wpApiMore);
     // console.log(getPosts);
     for (let i = 10; i < getPosts.length; i++) {
-        console.log(getPosts);
+        // console.log(getPosts);
         listPost.innerHTML += `<div class="project-card">
                                <a class="stacked" href="/projectpost.html?id=${getPosts[i].id}">
                                <img class="project-img" src="${getPosts[i].featured_media_src_url}" alt="${getPosts[i].acf.alt_text}">
