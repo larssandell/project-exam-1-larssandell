@@ -123,7 +123,7 @@ li {
     transition: 0.2s ease-in;
     padding: 10px 10px;
 }
-.nav-link:hover {
+.nav-link:hover, .nav-link:focus {
     box-shadow: #fff 1px 1px;
     transition: 0.2s ease-in;
     border-radius: 10px;
@@ -184,7 +184,7 @@ li {
     grid-area: img;
     width: 125px;
 }
-.card-image:hover {
+.card-image:hover, .card-image:focus {
     opacity: 0.8;
 }
 .card-headline {
@@ -251,7 +251,7 @@ button {
     height: 20px;
     font-family: var(--font-para);
 }
-button:hover {
+button:hover, button:focus {
     background-color: var(--btn-bg-hover);
 }
 
@@ -300,7 +300,7 @@ footer a {
     color: #fff;
     font-size: 1.5rem;    
 }
-.fa-brands:hover {
+.fa-brands:hover, .fa-brands:focus {
     transform: rotate(-25deg);
     transition: all 1s;
     color: #769cf0;
@@ -308,7 +308,7 @@ footer a {
 .fa-facebook {
     margin-left: 5px;
 }
-.fa-facebook:hover {
+.fa-facebook:hover, .fa-facebook:focus {
     transform: rotate(+25deg);
 }
 
@@ -381,7 +381,7 @@ footer a {
         border: none;
         box-shadow: 0;
     }
-    .nav-link:hover {
+    .nav-link:hover, .nav-link:focus {
         transition: 0.3s ease;
         padding: 10px 10px;
         border: none;

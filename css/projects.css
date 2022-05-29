@@ -42,7 +42,7 @@
     border-radius: 10px;
     transition: .3s ease-in-out;
 }
-.project-img:hover {
+.project-img:hover, .project-img:focus {
     opacity: 0.8;
 
 

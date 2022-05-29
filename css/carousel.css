@@ -96,7 +96,9 @@
     background: rgba(255, 255, 255, 0.4);  
 }
 .carousel-container:hover .btn-next,
-.carousel-container:hover .btn-prev {
+.carousel-container:hover .btn-prev,
+.carousel-container:focus .btn-next,
+.carousel-container:focus .btn-prev {
     display: block;
 }
 .btn-next:active, .btn-prev:active {
