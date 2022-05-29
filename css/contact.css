@@ -89,6 +89,8 @@ h1, h2 {
 .form-box textarea:active, textarea:focus,
 .form-box select:active, select:focus {
     border-inline: 2px solid #000;
+    background-color: rgba(0, 0, 0, 0.781);
+    color: #fff;
 }
 .form-box input:focus, .form-box textarea:focus {
     outline: 0;
