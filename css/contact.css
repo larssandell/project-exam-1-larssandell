@@ -1,8 +1,6 @@
 iframe {
     border-radius: 10px;
-    /* align-self: center; */
     width: 100%;
-    /* height: auto; */
     margin: 10px 0;
 }
 .main-container {
@@ -23,9 +21,6 @@ iframe {
 .main-container h2 {
     margin-top: 10px;
 }
-/* .form-container, .contact-description, .contact-location {
-    box-shadow: var(--boxshadow);
-} */
 .contact-description {
     grid-area: desc;
 }
@@ -122,6 +117,7 @@ h1, h2 {
     height: 25px;
     margin-top: 10px;
 }
+
 /* info box */
 #message {
     height: 80px;
@@ -168,8 +164,6 @@ textarea {
         height: 35px;
         margin-top: 10px;
     }
-
-
 }
 @media only screen and (min-width: 350px) {
     .form-box .error-form {

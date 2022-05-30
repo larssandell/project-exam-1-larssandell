@@ -20,7 +20,7 @@ html {
     --card-bg: #fff;
     --btn-bg-hover: #285E85;
     --btn-bg: #263C6D;
-    --font-headline: "PTSans", arial, sans-serif;
+    --font-headline: "PTSans", sans-serif;
     --font-para: 'HindGuntur', sans-serif;
     --boxshadow: 2px 2px 1px 0px rgba(0, 0, 0, 0.6);
     --bg-white: #f2f2f2;
@@ -95,8 +95,7 @@ header a {
     margin: auto;
     min-height: 74px;
     position: relative;
-  }
-  
+} 
 .logo-container {
     margin-left: 10px;
 }
@@ -147,6 +146,7 @@ li {
     transition: all 0.3s ease-in-out;
     background-color: #fff;
 }
+
 /* main content */
 .loader {
     width: 50px;
@@ -219,6 +219,7 @@ li {
 .service-title h2 {
     text-align: center;
 }
+
 /* Zoom image */
 #zoom-bg {
     position: fixed;
@@ -343,6 +344,7 @@ footer a {
     width: 150px;
     height: auto;
 }
+
 /* keyFrames */
 @keyframes rotate {
     0% {
