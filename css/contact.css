@@ -84,10 +84,12 @@ h1, h2 {
     font-size: 14px;
 }
 .form-box input:active, input:focus,
-.form-box textarea:active, textarea:focus,
-.form-box select:active, select:focus {
+.form-box textarea:active, textarea:focus {
     background-color: rgba(0, 0, 0, 0.2);
     color: #fff;
+}
+.form-box select:active, select:focus {
+    color: #000;
 }
 .form-box input:active::placeholder, 
 .form-box input:focus::placeholder,
