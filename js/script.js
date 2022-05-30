@@ -6,17 +6,17 @@ const loader = document.getElementsByClassName("loader");
 
 // hamburger menu
 const hamburgerMenu = document.querySelector(".hamburger-menu");
-const navMenu = document.querySelector(".nav-menu");
+const navgationMenu = document.querySelector(".nav-ul");
 
 
 hamburgerMenu.addEventListener("click", () => {
     hamburgerMenu.classList.toggle("active");
-    navMenu.classList.toggle("active");
+    navgationMenu.classList.toggle("active");
 });
 
 document.querySelectorAll(".nav-link").forEach(event => event.addEventListener("click", () => {
     hamburgerMenu.classList.remove("active");
-    navMenu.classList.remove("active");
+    navgationMenu.classList.remove("active");
 }));
 
 

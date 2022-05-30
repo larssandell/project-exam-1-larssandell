@@ -18,10 +18,9 @@ main {
 }
 
 .bg {
-    background: var(--card);
+    background: var(--card-bg);
     border-radius: 10px;
     margin-bottom: 20px;
-    box-shadow: var(--boxshadow);
 }
 
 .container-box img {
@@ -31,16 +30,17 @@ main {
     object-fit: cover;
     border-radius: 10px;
 }
-.container-box h2 {
+.container-box h1 {
     text-align: center;
-    font-size: 1rem;
+    font-size: 1.5rem;
     margin-bottom: 5px;
 }
 .container-box p {
     margin: 0 10px 10px;
-    font-size: 0.6rem;
+    font-size: 0.7rem;
 }
 
+/* media Q */
 @media only screen and (min-width: 500px) {
     #container {
         grid-template-rows: repeat(auto-fit, minmax(250px, 1fr));

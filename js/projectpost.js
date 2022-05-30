@@ -22,7 +22,7 @@ async function wpPost() {
                                   <img id="image-zoom" src="${postData.featured_media_src_url}" alt="${postData.acf.alt_text}"/>
                                   </div>
                                   <div class="bg content">
-                                  <h2>${postData.title.rendered}</h2>
+                                  <h1>${postData.title.rendered}</h1>
                                   <p>${postData.acf.paragraph}</p> 
                                  </div></div>`;
       zoomImages();
