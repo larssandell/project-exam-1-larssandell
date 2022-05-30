@@ -73,7 +73,7 @@ h1, h2 {
 }
 .form-box input, textarea {
     background-color: rgba(245, 245, 245, 0.945);
-    border: 1px solid rgb(75, 75, 75);
+    border: 1px solid #fff;
     border-radius: 10px;
     display: block;
     padding: 10px;
@@ -82,20 +82,20 @@ h1, h2 {
 }
 .form-box select {
     background-color: rgba(245, 245, 245, 0.945);
-    border: 1px solid #000;
+    border: 1px solid #fff;
     font-size: 14px;
 }
 .form-box input:active, input:focus,
 .form-box textarea:active, textarea:focus,
 .form-box select:active, select:focus {
     border-inline: 2px solid #000;
-    background-color: rgba(0, 0, 0, 0.781);
+    background-color: rgba(0, 0, 0, 0.486);
     color: #fff;
 }
 .form-box input:focus, .form-box textarea:focus {
     outline: 0;
 }
-.form-box.success input {
+.form-box.success input, .form-box.success textarea {
     border-color: green;
 }
 .form-box.error input, .form-box.error textarea {

@@ -27,8 +27,8 @@ async function wpPost() {
                                  </div></div>`;
       zoomImages();
     } catch (err) {
-        console.log(err);
+        console.log("Here is the error: ", err);
     }
-  };
+};
 
 wpPost();

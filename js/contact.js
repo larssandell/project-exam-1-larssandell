@@ -11,21 +11,21 @@ const formSuccess = document.querySelector(".validation-success");
 // error and success messages
 const error = (element, message) => {
     // endre navn på inputControl og errorDispay
-    const inputControl = element.parentElement;
-    const errorDisplay = inputControl.querySelector('.error-form');
+    const inputElement = element.parentElement;
+    const showError = inputElement.querySelector('.error-form');
 
-    errorDisplay.innerText = message;
-    inputControl.classList.add('error');
-    inputControl.classList.remove('success');
+    showError.innerText = message;
+    inputElement.classList.add('error');
+    inputElement.classList.remove('success');
 };
 
 const success = element => {
-    const inputControl = element.parentElement;
-    const errorDisplay = inputControl.querySelector('.error-form');
+    const inputElement = element.parentElement;
+    const showError = inputElement.querySelector('.error-form');
 
-    errorDisplay.innerText = '';
-    inputControl.classList.add('success');
-    inputControl.classList.remove('error');
+    showError.innerText = '';
+    inputElement.classList.add('success');
+    inputElement.classList.remove('error');
 };
 
 // Form validation and eventlistner
@@ -47,7 +47,7 @@ form.addEventListener("submit", (e) =>  {
         error(formEmail, "Provide a valid email address");
     }
     
-    if (checkForm(formSubject.value, 6)) {
+    if (checkForm(formSubject.value, 5)) {
         error(formSubject, "Subject must be more then 4 characters long");
     } else {
         success(formSubject);
@@ -75,7 +75,6 @@ function checkForm(value, leng) {
         return true;
     }
 };
-
 
 //testing keyup 
 // formName.addEventListener("keyup", logKey);

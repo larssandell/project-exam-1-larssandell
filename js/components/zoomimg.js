@@ -4,7 +4,6 @@ export default function zoomImages() {
     document.body.appendChild(zoomBackground);
     const popupImages = document.querySelectorAll("#image-zoom");
 
-
     popupImages.forEach(image => {
         // console.log(image, "her er jeg nå image");
         image.addEventListener("click", () => {
@@ -22,14 +21,11 @@ export default function zoomImages() {
             popupImage.src = image.src;
             popupImage.id = "popupImage";
 
-    
-            // removing child so they dont stack on top of eachoter
+            // removing child so they dont stack
             if (zoomBackground.firstChild) {
                 zoomBackground.removeChild(zoomBackground.firstChild)
             }
-            zoomBackground.appendChild(popupImage);
-    
-            
+            zoomBackground.appendChild(popupImage); 
         })
     });
     // Closeing the popup

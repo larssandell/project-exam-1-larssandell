@@ -24,7 +24,7 @@ async function wpPostList() {
                                </a></div>`;
     }
   } catch (err) {
-    console.log(err, "wpPostlist Api");
+    console.log("Here is the error: ", err);
   }
 };
 
@@ -50,7 +50,7 @@ async function loadMore() {
     }
     loadMoreBtn.style.display = "none";
   } catch (err) {
-    console.log(err, "loadMore Api");
+    console.log("Here is the error: ", err);
   }
 };
 

@@ -1,7 +1,7 @@
 // Api Call universal
-const loader = document.querySelector(".loader");
 const wpApi = "https://si.larssandell.no/wp-json/wp/v2/posts/";
 const main = document.querySelector("main");
+const loader = document.querySelector(".loader");
 
 export default async function apiCall(urlApi) {
   try {

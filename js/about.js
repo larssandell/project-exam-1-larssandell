@@ -11,7 +11,9 @@ async function wpLogos() {
           // console.log(getLogo);
           customers.innerHTML += `<div class="client"><img class="logo-img" src="${getLogo[i].featured_media_src_url}" alt="${getLogo[i].acf.alt_text}"></div>`;
       }
-    } catch (err) {}
+    } catch (err) {
+      console.log("Here is the error: ", err);
+    }
 };
   
 wpLogos();
